@@ -20,3 +20,44 @@ header {
     flex-wrap: wrap;
    justify-content: space-between;
 }
+
+.city-form-container{
+    margin-bottom: 10px;
+}
+
+.form-input {
+  flex-grow: 1;
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+}
+    
+.btn {
+    flex-grow: 2;
+    font-size: 1.5em;
+    text-decoration:none;
+    border: none;
+    outline: none;
+    background-color: dodgerblue;
+    color: white;
+    margin-bottom: 6px;
+  }
+
+.fa-search:hover{
+  color: #FFD700;
+}
+
+.borderDiv {
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 18px;  
+  border:groove rgba(102, 102, 153, 0.2);
+}
+
+.border-Div-right-column {
+  background-color: white;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-bottom: 10px;
+}
