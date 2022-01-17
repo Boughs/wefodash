@@ -26,3 +26,32 @@ dynFormContainer.appendChild(formButton);
 // Find the city form
 var seachEventHanglerEl = document.querySelector("#dymCityForm");
 var searchByCityEl = document.querySelector("#city-name");
+
+// Left column cities container
+var citiesContainerEl = document.createElement("div");
+citiesContainerEl.setAttribute("id", "dym-cities-list");
+citiesContainerEl.classList = "list-group";
+// Append to the left column
+leftColumnEL.appendChild(citiesContainerEl);
+// select list div container
+var citiesListContainerEl = document.querySelector("#dym-cities-list");
+// load previously searched cities from local storage function
+var populateSavedCities = function() {
+       var citiesLocalStorage = JSON.parse(localStorage.getItem("savedCities"));
+         
+       if (citiesLocalStorage === null) {  
+       } else {
+       $(".list-group-item").remove();
+           
+        for (i=0; i< citiesLocalStorage.length;i++) {
+            var cityNameEl = document.createElement("a")
+            cityNameEl.setAttribute("href", "#")
+            cityNameEl.setAttribute("data-city", citiesLocalStorage[i]);
+            cityNameEl.setAttribute("id", citiesLocalStorage[i]);
+            cityNameEl.setAttribute("role", "button");
+            cityNameEl.classList = "list-group-item list-group-item-action list-group-item-primary";
+            cityNameEl.textContent = citiesLocalStorage[i];
+            citiesContainerEl.appendChild(cityNameEl);
+        };
+       };
+};
